@@ -4,7 +4,7 @@ import {
 }
   from '@/tools/cache'
 
-//设置群组
+// 保存搜索key
 export const setSearch = function ({
   commit,
   state

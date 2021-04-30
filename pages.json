@@ -203,7 +203,16 @@
 						"navigationBarTitleText": "设置"
 					}
 				}
-			]
+			    ,{
+                    "path" : "collect/collect",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "我的收藏",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 		}
 	],
 	"globalStyle": {

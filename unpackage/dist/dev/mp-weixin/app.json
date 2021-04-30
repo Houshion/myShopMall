@@ -23,7 +23,8 @@
     {
       "root": "other",
       "pages": [
-        "search/search"
+        "search/search",
+        "collect/collect"
       ]
     }
   ],

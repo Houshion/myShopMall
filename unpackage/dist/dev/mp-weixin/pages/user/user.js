@@ -202,23 +202,102 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ 6);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var listCell = function listCell() {__webpack_require__.e(/*! require.ensure | components/mix-list-cell */ "components/mix-list-cell").then((function () {return resolve(__webpack_require__(/*! @/components/mix-list-cell */ 217));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
-
-
-var startY = 0,moveY = 0,pageAtTop = true;var _default =
+var startY = 0,
+moveY = 0,
+pageAtTop = true;var _default =
 {
   components: {
     listCell: listCell },
 
   data: function data() {
     return {
-      coverTransform: 'translateY(0px)',
-      coverTransition: '0s',
+      coverTransform: "translateY(0px)",
+      coverTransition: "0s",
       moving: false };
 
   },
-  onLoad: function onLoad() {
-  },
+  onLoad: function onLoad() {},
 
 
 
@@ -240,17 +319,16 @@ var startY = 0,moveY = 0,pageAtTop = true;var _default =
 
 
   computed: _objectSpread({},
-  (0, _vuex.mapState)(['hasLogin', 'userInfo'])),
+  (0, _vuex.mapState)(["hasLogin", "userInfo"])),
 
   methods: {
-
     /**
               * 统一跳转接口,拦截未登录路由
               * navigator标签现在默认没有转场动画，所以用view
               */
     navTo: function navTo(url) {
       if (!this.hasLogin) {
-        url = '/pages/public/login';
+        url = "/pages/public/login";
       }
       uni.navigateTo({
         url: url });
@@ -268,7 +346,7 @@ var startY = 0,moveY = 0,pageAtTop = true;var _default =
       if (pageAtTop === false) {
         return;
       }
-      this.coverTransition = 'transform .1s linear';
+      this.coverTransition = "transform .1s linear";
       startY = e.touches[0].clientY;
     },
     coverTouchmove: function coverTouchmove(e) {
@@ -292,8 +370,8 @@ var startY = 0,moveY = 0,pageAtTop = true;var _default =
         return;
       }
       this.moving = false;
-      this.coverTransition = 'transform 0.3s cubic-bezier(.21,1.93,.53,.64)';
-      this.coverTransform = 'translateY(0px)';
+      this.coverTransition = "transform 0.3s cubic-bezier(.21,1.93,.53,.64)";
+      this.coverTransform = "translateY(0px)";
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

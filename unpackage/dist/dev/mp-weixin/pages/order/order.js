@@ -235,6 +235,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 224));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var empty = function empty() {__webpack_require__.e(/*! require.ensure | components/empty */ "components/empty").then((function () {return resolve(__webpack_require__(/*! @/components/empty */ 231));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
@@ -244,34 +276,35 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
   data: function data() {
     return {
       tabCurrentIndex: 0,
-      navList: [{
+      navList: [
+      {
         state: 0,
-        text: '全部',
-        loadingType: 'more',
+        text: "全部",
+        loadingType: "more",
         orderList: [] },
 
       {
         state: 1,
-        text: '待付款',
-        loadingType: 'more',
+        text: "待付款",
+        loadingType: "more",
         orderList: [] },
 
       {
         state: 2,
-        text: '待收货',
-        loadingType: 'more',
+        text: "待收货",
+        loadingType: "more",
         orderList: [] },
 
       {
         state: 3,
-        text: '待评价',
-        loadingType: 'more',
+        text: "待评价",
+        loadingType: "more",
         orderList: [] },
 
       {
         state: 4,
-        text: '售后',
-        loadingType: 'more',
+        text: "售后",
+        loadingType: "more",
         orderList: [] }] };
 
 
@@ -292,7 +325,6 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
       this.loadData();
     }
 
-
   },
 
   methods: {
@@ -303,16 +335,16 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
       var navItem = this.navList[index];
       var state = navItem.state;
 
-      if (source === 'tabChange' && navItem.loaded === true) {
+      if (source === "tabChange" && navItem.loaded === true) {
         //tab切换只有第一次需要加载数据
         return;
       }
-      if (navItem.loadingType === 'loading') {
+      if (navItem.loadingType === "loading") {
         //防止重复加载
         return;
       }
 
-      navItem.loadingType = 'loading';
+      navItem.loadingType = "loading";
 
       setTimeout(function () {
         var orderList = _Json.default.orderList.filter(function (item) {
@@ -329,17 +361,17 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
           navItem.orderList.push(item);
         });
         //loaded新字段用于表示数据加载完毕，如果为空可以显示空白页
-        _this.$set(navItem, 'loaded', true);
+        _this.$set(navItem, "loaded", true);
 
-        //判断是否还有数据， 有改为 more， 没有改为noMore 
-        navItem.loadingType = 'more';
+        //判断是否还有数据， 有改为 more， 没有改为noMore
+        navItem.loadingType = "more";
       }, 600);
     },
 
     //swiper 切换
     changeTab: function changeTab(e) {
       this.tabCurrentIndex = e.target.current;
-      this.loadData('tabChange');
+      this.loadData("tabChange");
     },
     //顶部tab点击
     tabClick: function tabClick(index) {
@@ -348,7 +380,7 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
     //删除订单
     deleteOrder: function deleteOrder(index) {var _this2 = this;
       uni.showLoading({
-        title: '请稍后' });
+        title: "请稍后" });
 
       setTimeout(function () {
         _this2.navList[_this2.tabCurrentIndex].orderList.splice(index, 1);
@@ -358,7 +390,7 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
     //取消订单
     cancelOrder: function cancelOrder(item) {var _this3 = this;
       uni.showLoading({
-        title: '请稍后' });
+        title: "请稍后" });
 
       setTimeout(function () {var _this3$orderStateExp =
         _this3.orderStateExp(9),stateTip = _this3$orderStateExp.stateTip,stateTipColor = _this3$orderStateExp.stateTipColor;
@@ -379,16 +411,18 @@ var _Json = _interopRequireDefault(__webpack_require__(/*! @/Json */ 13));functi
 
     //订单状态文字和颜色
     orderStateExp: function orderStateExp(state) {
-      var stateTip = '',
-      stateTipColor = '#fa436a';
+      var stateTip = "",
+      stateTipColor = "#fa436a";
       switch (+state) {
         case 1:
-          stateTip = '待付款';break;
+          stateTip = "待付款";
+          break;
         case 2:
-          stateTip = '待发货';break;
+          stateTip = "待发货";
+          break;
         case 9:
-          stateTip = '订单已关闭';
-          stateTipColor = '#909399';
+          stateTip = "订单已关闭";
+          stateTipColor = "#909399";
           break;
 
         //更多自定义
