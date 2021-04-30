@@ -1,0 +1,383 @@
+/* author Ocean */
+@import "./color.scss";
+
+/****************** 超出样式 ***************/
+.over_hide {
+  overflow: hidden;
+}
+
+.over_hidey {
+  overflow-y: hidden;
+}
+
+.over_hidex {
+  overflow-x: hidden;
+}
+
+.over_sc {
+  overflow: scroll;
+}
+
+.over_scy {
+  overflow-y: scroll;
+}
+
+.over_scx {
+  overflow-x: scroll;
+}
+
+$el: 10;
+
+@while $el>0 {
+  .over_el_#{$el} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; //作为弹性伸缩盒子模型显示。
+    -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+    -webkit-line-clamp: #{$el}; //显示的行
+  }
+
+  $el: $el - 1;
+}
+
+/****************** 顶/底部固定 ***************/
+.flxed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.fixed_top {
+  @extend .flxed;
+  top: 0;
+}
+
+.fixed_bottom {
+  @extend .flxed;
+  bottom: 0;
+}
+
+/******************* 浮动样式 *******************/
+.po_re {
+  position: relative !important;
+}
+
+.po_ab {
+  position: absolute !important;
+}
+
+.po_fi {
+  position: fixed !important;
+}
+
+/******************* flex样式 *******************/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex_center {
+  @extend .flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.flex_wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex_no_wrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex_v_center {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex_between {
+  @extend .flex_center;
+  justify-content: space-between;
+}
+
+.flex_around {
+  @extend .flex_center;
+  justify-content: space-around;
+}
+
+.flex_start {
+  @extend .flex_center;
+  justify-content: flex-start;
+}
+
+.flex_end {
+  @extend .flex_center;
+  justify-content: flex-end;
+}
+
+.flex_v_start {
+  @extend .flex;
+  align-items: flex-start;
+}
+
+.flex_v_end {
+  @extend .flex;
+  align-items: flex-end;
+}
+
+.flex1 {
+  flex: 1 1;
+}
+
+.flex2 {
+  flex: 2 2;
+}
+
+/*************** margin // padding ****************/
+.mg_auto {
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$i: 100;
+
+@while $i>=0 {
+  .mg_#{$i} {
+    margin: $i * 2upx;
+  }
+
+  .mg_l_#{$i} {
+    margin-left: $i * 2upx;
+  }
+
+  .mg_r_#{$i} {
+    margin-right: $i * 2upx;
+  }
+
+  .mg_t_#{$i} {
+    margin-top: $i * 2upx;
+  }
+
+  .mg_b_#{$i} {
+    margin-bottom: $i * 2upx;
+  }
+
+  .mg_lr_#{$i} {
+    margin-left: $i * 2upx;
+    margin-right: $i * 2upx;
+  }
+
+  .mg_tb_#{$i} {
+    margin-top: $i * 2upx;
+    margin-bottom: $i * 2upx;
+  }
+
+  .pd_#{$i} {
+    padding: $i * 2upx;
+  }
+
+  .pd_l_#{$i} {
+    padding-left: $i * 2upx;
+  }
+
+  .pd_r_#{$i} {
+    padding-right: $i * 2upx;
+  }
+
+  .pd_t_#{$i} {
+    padding-top: $i * 2upx;
+  }
+
+  .pd_b_#{$i} {
+    padding-bottom: $i * 2upx;
+  }
+
+  .pd_lr_#{$i} {
+    padding-left: $i * 2upx;
+    padding-right: $i * 2upx;
+  }
+
+  .pd_tb_#{$i} {
+    padding-top: $i * 2upx;
+    padding-bottom: $i * 2upx;
+  }
+
+  $i: $i - 5;
+}
+
+/******************* 栅格排版样式 *******************/
+$w: 100;
+
+@while $w>0 {
+  .wd_#{$w} {
+    @extend .mg_auto;
+    width: $w * 1%;
+  }
+
+  $w: $w - 5;
+}
+
+.wd_33 {
+  width: 33.3%;
+  @extend .mg_auto;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.vh100 {
+  min-height: 100vh;
+}
+
+/*********************** 字体样式 ************************/
+$f: 50;
+
+@while $f>0 {
+  .font_#{$f} {
+    font-size: $f * 2upx;
+  }
+
+  $f: $f - 1;
+}
+
+$lh: 10;
+
+@while $lh>0 {
+  .lh_#{$lh} {
+    line-height: $lh;
+  }
+
+  $lh: $lh - 1;
+}
+
+.font_b {
+  font-weight: bold;
+}
+
+.word_break {
+  word-break: break-all;
+}
+
+/********************* 字体对齐方式 ***********************/
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.twrap {
+  overflow: wrap;
+}
+
+/********************* 线条边框 ***********************/
+
+.border {
+  border: solid 1px #f5f5f5 !important;
+}
+
+.border_l {
+  border-left: solid 1px #f5f5f5 !important;
+}
+
+.border_r {
+  border-right: solid 1px #f5f5f5 !important;
+}
+
+.border_t {
+  border-top: solid 1px #f5f5f5 !important;
+}
+
+.border_b {
+  border-bottom: solid 1px #f5f5f5 !important;
+}
+
+.border_n {
+  border: none;
+}
+
+.border_main {
+  border-color: $main-color;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: #e1e1e1;
+}
+
+/********************* 弯角样式 ***********************/
+$r: 50;
+
+@while $r>=0 {
+  .radius_#{$r} {
+    border-radius: $r * 2upx;
+  }
+
+  $r: $r - 1;
+}
+
+/********************* 盒子样式 ***********************/
+.box {
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
+}
+
+/************************ 列数样式 *******************************/
+.columns {
+  columns: 200upx 3;
+  -moz-columns: 200upx 3;
+  -webkit-columns: 200upx 3;
+}
+
+/************************** 光标样式 *****************************/
+.pointer {
+  cursor: pointer;
+}
+
+/************************** 阴影样式 *****************************/
+.box_shadow {
+  box-shadow: 0 0 7px 1px #ddd;
+}
+
+/************************ 遮罩 *********************/
+.mask {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+/************************ 缩进 *********************/
+.ti2 {
+  text-indent: 2em;
+}
+
+/************************ 盒子居中 *********************/
+.box_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

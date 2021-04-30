@@ -1,0 +1,105 @@
+/* 主色调 */
+$main-color: #3282ff;
+/* 出版社主色调 */
+$cbs-color: #7779ff;
+/* 民营企业主色调 */
+$myqy-color: #e4b76a;
+/* 教育机构主色调 */
+$jyjg-color: #05dcdf;
+/* 文字主色调 */
+$main-text-color: #72b7fe;
+/* 出版社文字色调 */
+$cbs-text-color: #c1c2ff;
+/* 民营企业文字色调 */
+$myqy-text-color: #ecd1a2;
+/* 教育机构文字色调 */
+$jyjg-text-color: #71e9eb;
+/* 主色背景 */
+$main-bg-color: #f7fafd;
+/* 主色块背景 */
+$main-block-bg-color: #EBF5FF;
+/* 主色渐变 */
+$main-linear-color: linear-gradient(to right, #ecf5ff, #ffffff);
+/* 出版社渐变 */
+$cbs-linear-color: linear-gradient(to right, #f2f2ff, #ffffff);
+/* 民营企业渐变 */
+$myqy-linear-color: linear-gradient(to right, #fff7e9, #ffffff);
+/* 教育机构渐变 */
+$jyjg-linear-color: linear-gradient(to right, #ecffff, #ffffff);
+/* 主按钮色调 */
+// $main-btn-color: #fb812e;
+/* 主按钮色调 */
+$main-btn-linear-color: linear-gradient(to top, #3282ff, #72b7fe);
+/* 边线颜色 */
+$border-color: #e2edff;
+/* 出版社边线颜色 */
+$cbs-border-color: #daddfd;
+/* 民营企业边线颜色 */
+$myqy-border-color: #f3ede0;
+/* 教育机构边线颜色 */
+$jyjg-border-color: #c7f4f7;
+
+/* 详情查看uni.scss颜色取值 */
+.primary {
+  color: $uni-color-primary;
+}
+
+.success {
+  color: $uni-color-success;
+}
+
+.warning {
+  color: $uni-color-warning;
+}
+
+.error {
+  color: $uni-color-error;
+}
+
+.info {
+  color: $uni-color-info;
+}
+
+.bg_primary {
+  background: $uni-color-primary;
+}
+
+.bg_success {
+  background: $uni-color-success;
+}
+
+.bg_warning {
+  background: $uni-color-warning;
+}
+
+.bg_error {
+  background: $uni-color-error;
+}
+
+.bg_info {
+  background: $uni-color-info;
+}
+
+.bg_white {
+  background: $uni-text-color-white;
+}
+
+.grey {
+  color: $uni-text-color-grey;
+}
+
+.black {
+  color: $uni-text-color-black;
+}
+
+.white {
+  color: $uni-text-color-white;
+}
+
+.textc {
+  color: $uni-text-color;
+}
+
+.text_main{
+  color: $main-text-color;
+}

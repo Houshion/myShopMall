@@ -1,0 +1,112 @@
+@import "./base.scss";
+
+.main_color {
+  color: $main-color;
+}
+
+.cbs_color {
+  color: $cbs-color;
+}
+
+.myqy_color {
+  color: $myqy-color;
+}
+
+.jyjg_color {
+  color: $jyjg-color;
+}
+
+.main_bgl {
+  color: $main-text-color;
+  background: $main-linear-color;
+}
+
+.cbs_bgl {
+  color: $cbs-text-color;
+  background: $cbs-linear-color;
+}
+
+.myqy_bgl {
+  color: $myqy-text-color;
+  background: $myqy-linear-color;
+}
+
+.jyjg_bgl {
+  color: $jyjg-text-color;
+  background: $jyjg-linear-color;
+}
+
+.main_shadow {
+  box-shadow: 0 0 7px 1px $border-color;
+}
+
+.main_border_b {
+  border-bottom: dotted 3upx $border-color !important;
+}
+
+.cbs_shadow {
+  box-shadow: 0 0 7px 1px $cbs-border-color;
+}
+
+.myqy_shadow {
+  box-shadow: 0 0 7px 1px $myqy-border-color;
+}
+
+.jyjg_shadow {
+  box-shadow: 0 0 7px 1px $jyjg-border-color;
+}
+
+.main_btn {
+  color: $uni-text-color-white;
+  background: $main-btn-linear-color;
+  border-radius: 14upx;
+  text-align: center;
+  padding: 15upx;
+  font-size: 32upx;
+}
+
+.base_label {
+  &::before {
+    content: "";
+    width: 8upx;
+    height: 40upx;
+    background: $main-color;
+    position: absolute;
+  }
+}
+
+.name_label {
+  background: $main-color;
+  color: $uni-text-color-white;
+  border-top-left-radius: 14upx;
+  border-bottom-right-radius: 14upx;
+  font-size: 20upx;
+  line-height: 35upx;
+  height: 35upx;
+  width: 60upx;
+  text-align: center;
+  position: absolute;
+}
+
+.status {
+  color: $uni-text-color-white;
+  padding: 10upx 20upx;
+  border-top-left-radius: 40upx;
+  border-bottom-left-radius: 40upx;
+
+  &_success {
+    background: $uni-color-primary;
+  }
+
+  &_error {
+    background: $uni-color-error;
+  }
+
+  &_warning {
+    background: $uni-color-warning;
+  }
+
+  &_info {
+    background: $uni-color-info;
+  }
+}
